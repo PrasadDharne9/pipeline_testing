@@ -24,7 +24,8 @@ pipeline {
         stage('Deactivate Environment') {
             steps {
                 bat '''
-                    call conda deactivate
+                    call C:\\Users\\DPrasad\\Anaconda\\Scripts\\deactivate.bat
+                    call conda activate C:\\Users\\DPrasad\\Anaconda\\envs\\NeuralProphet
                 '''
             }
         }
