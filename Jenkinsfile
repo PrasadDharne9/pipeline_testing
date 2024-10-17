@@ -21,12 +21,5 @@ pipeline {
             }
         }
     
-        stage('Deactivate Environment') {
-            steps {
-                bat '''
-                    call C:\\Users\\DPrasad\\Anaconda\\Scripts\\deactivate.bat
-                '''
-            }
-        }
     }
 }
