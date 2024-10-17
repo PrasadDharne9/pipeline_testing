@@ -25,7 +25,6 @@ pipeline {
             steps {
                 bat '''
                     call C:\\Users\\DPrasad\\Anaconda\\Scripts\\deactivate.bat
-                    call conda deactivate C:\\Users\\DPrasad\\Anaconda\\envs\\NeuralProphet
                 '''
             }
         }
