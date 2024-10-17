@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     bat '''
-                        python C:\\Users\\DPrasad\\Anaconda\\envs\\NeuralProphet\\Hello_world.py
+                        C:\\Users\\DPrasad\\Anaconda\\envs\\NeuralProphet\\python Hello_world.py
                     '''
                 }
             }
