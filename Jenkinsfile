@@ -19,11 +19,6 @@ pipeline {
                     '''
                 }
             }
-            post {
-                success {
-                    archiveArtifacts artifacts: "**/*.xlsx", onlyIfSuccessful: true
-                }
-            }
         }
     
         stage('Deactivate Environment') {
