@@ -2,16 +2,21 @@ pipeline {
     agent any
 
     stages {
-        stage('Activate Daikin Environment') {
+        stage('Activate Environment') {
             steps {
-                sh 'C:/Users/DPrasad/Anaconda/condabin/activate C:/Users/DPrasad/Anaconda/envs/NeuralProphet'
+                bat '''
+                    call C:\\Users\\DPrasad\\Anaconda\\Scripts\\activate.bat
+                    call conda activate C:\\Users\\DPrasad\\Anaconda\\envs\\NeuralProphet
+                '''
             }                   
         }
         
-        stage('Modeling') {
+        stage('Code') {
             steps {
                 script {
-                    sh "C:/Users/DPrasad/Anaconda/envs/NeuralProphet/python Hello_world.py"
+                    bat '''
+                        python C:\\Users\\DPrasad\\Anaconda\\envs\\NeuralProphet\\Hello_world.py
+                    '''
                 }
             }
             post {
@@ -21,9 +26,11 @@ pipeline {
             }
         }
     
-        stage('Deactivate Daikin Environment') {
+        stage('Deactivate Environment') {
             steps {
-                sh 'C:/Users/DPrasad/Anaconda/condabin/deactivate C:/Users/DPrasad/Anaconda/envs/NeuralProphet'
+                bat '''
+                    call conda deactivate
+                '''
             }
         }
     }
